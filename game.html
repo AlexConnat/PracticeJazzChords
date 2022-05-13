@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <title>Test Midi</title>
+</head>
+
+<body>
+
+  <div id="selectionMenuUI">
+
+    <br><br><br><br><br><br>
+
+    <div id="chordQualities">Chord Qualities:</div>
+    <button class="btn" id="min6" onclick="toggle(this)">min6</button>
+    <button class="btn" id="6"    onclick="toggle(this)">6</button>
+    <button class="btn" id="min7" onclick="toggle(this)" toggled>min7</button>
+    <button class="btn" id="7"    onclick="toggle(this)" toggled>7</button>
+    <button class="btn" id="maj7" onclick="toggle(this)" toggled>maj7</button>
+    <button class="btn" id="ø7"   onclick="toggle(this)">ø7</button>
+    <button class="btn" id="°7"   onclick="toggle(this)">°7</button>
+    
+
+    <br><br><br>
+
+    <div id="chordTones">Chord Tones:</div>
+    <button class="btn" id="root"    onclick="toggle(this)">Root</button>
+    <button class="btn" id="third"   onclick="toggle(this)" toggled>Third</button>
+    <button class="btn" id="fifth"   onclick="toggle(this)">Fifth</button>
+    <button class="btn" id="seventh" onclick="toggle(this)" toggled>Seventh</button>
+
+    <!-- <br><br><br>
+    <div id="chordExtensions">Chord Extensions</div>
+    <button class="btn" id="ninth"      onclick="toggle(this)" toggled>9 / b9 / #9</button>
+    <button class="btn" id="eleventh"   onclick="toggle(this)">11 / #11</button>
+    <button class="btn" id="thirteenth" onclick="toggle(this)" toggled>13 / b13</button> -->
+
+    <br><br><br>
+
+    <!-- Choose the time during which a chord is displayed -->
+    <div id="divNbSecondsPerChord">
+      <div id="chordTime">Time per Chord:</div>
+      <input type="range" min="1" max="10" value="5" step="1" id="sliderNbSecondsPerChord">
+      <div id="nbSecondsPerChord">{3 sec}</div>
+      <script>
+        var slider = document.getElementById("sliderNbSecondsPerChord");
+        var output = document.getElementById("nbSecondsPerChord");
+        output.innerHTML = slider.value + ' seconds';
+        // Update the current slider value (each time you drag the slider handle)
+        slider.oninput = function () {
+          if (this.value == 1) {
+            output.innerHTML = this.value + ' second'
+          } else {
+            output.innerHTML = this.value + ' seconds';
+          }
+        }
+      </script>
+    </div>
+
+    <br><br><br><br>
+
+    <div id="errorMessage" hidden>{Error Message Placeholder}</div>
+
+    <br><br>
+
+    <!-- Pressing "start" will hide the selection menu and directly start the game -->
+    <div id="startButton">
+      <button class="btn2" onclick="startGame()">Start Practicing!</button>
+    </div>
+
+  </div>
+
+  <div id="gameUI" hidden>
+
+    <div id='progressbar'></div>
+
+    <div id="chord">Chord</div>
+
+    <div id="note">Note</div>
+
+  </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+@font-face {
+  font-family: MyMontserrat;
+  src: url(Montserrat-Regular.ttf);
+}
+
+.btn {
+  opacity: 0.7;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 25px;
+}
+
+.btn[toggled] {
+  background-color: salmon;
+  opacity: 1.0;
+}
+
+.btn2 {
+  /* background-color: rgb(10, 181, 124); */
+  background-color: rgb(7, 229, 155);
+  opacity: 0.6;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 25px;
+  transition: 0.3s;
+}
+
+.btn2:hover {
+  opacity: 1.0;
+}
+
+#chordQualities, #chordTones, #chordTime {
+  font-size: 1.5em;
+  padding-bottom: 15px;
+}
+
+#errorMessage {
+  font-size: 1.2em;
+  color: red;
+  font-style: italic;
+}
+
+input[type="range"] {
+  width: 15%;
+  color: salmon;
+}
+
+body {
+  text-align: center;
+  font-family: 'MyMontserrat';
+}
+
+#chord {
+    font-size: 4em;
+    padding-top: 5%;
+}
+
+#note {
+    font-size: 3em;
+    padding-top: 10%;
+}
+
+/* Refenrece: https://stackoverflow.com/questions/31109581/javascript-timer-progress-bar */
+.progressbar {
+  width: 80%;
+  margin: 100px auto;
+  /* border: solid 1px #000; */
+}
+.progressbar .inner {
+  height: 5px;
+  animation: progressbar-countdown;
+  /* Placeholder, this will be updated using javascript */
+  animation-duration: 40s;
+  /* We stop in the end */
+  animation-iteration-count: infinite;
+  /* Stay on pause when the animation is finished finished */
+  /* animation-fill-mode: forwards; */
+  /* We start paused, we start the animation using javascript */
+  /* animation-play-state: paused; */
+  /* We want a linear animation, ease-out is standard */
+  animation-timing-function: linear;
+}
+@keyframes progressbar-countdown {
+  0% {
+    width: 100%;
+    background: rgb(13, 142, 234);
+  }
+  100% {
+    width: 0%;
+    background-color: salmon;
+  }
+}
+/*******************************************/
