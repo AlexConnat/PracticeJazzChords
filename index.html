@@ -53,11 +53,7 @@
         output.innerHTML = slider.value + ' seconds';
         // Update the current slider value (each time you drag the slider handle)
         slider.oninput = function () {
-          if (this.value == 1) {
-            output.innerHTML = this.value + ' second'
-          } else {
-            output.innerHTML = this.value + ' seconds';
-          }
+          output.innerHTML = this.value == 1 ? this.value + ' second' : this.value + ' seconds';
         }
       </script>
     </div>
