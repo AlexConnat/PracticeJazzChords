@@ -58,7 +58,7 @@ body {
 
 #chord {
     font-size: 4em;
-    padding-top: 5%;
+    padding-top: 2%;
 }
 
 #note {
@@ -69,7 +69,7 @@ body {
 /* Refenrece: https://stackoverflow.com/questions/31109581/javascript-timer-progress-bar */
 .progressbar {
   width: 80%;
-  margin: 100px auto;
+  margin: 8% auto;
   /* border: solid 1px #000; */
 }
 .progressbar .inner {
@@ -97,3 +97,11 @@ body {
   }
 }
 /*******************************************/
+
+#backButton {
+  position: absolute;
+  /* left: 50%; */
+  bottom: 8%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+}
